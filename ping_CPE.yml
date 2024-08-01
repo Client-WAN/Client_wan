@@ -1,6 +1,8 @@
 ---
 
-- hosts: all
-
+- name: Ping router
+  hosts: localhost
   tasks:
-    - action: ping
+    - name: Ping the router
+      ping:
+        host: w15sv4000rr566
