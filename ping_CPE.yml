@@ -3,7 +3,4 @@
 - hosts: all
 
   tasks:
-
-    - name: ping
-      ansible.netcommon.net_ping:
-        dest: 100.70.7.53
+    - action: ping
