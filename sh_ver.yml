@@ -1,6 +1,6 @@
 ---
-- name: Configure domain name
-  hosts: routers
+- name: sh ver
+  hosts: all
   gather_facts: false
   tasks:
     - name: Send Command
@@ -12,4 +12,4 @@
     
     - name: Print show version
       ansible.builtin.debug:
-        msg: "{{ show_command_output.stdout_lines[0] }}"
+        msg: "{{ show_command_output }}"
