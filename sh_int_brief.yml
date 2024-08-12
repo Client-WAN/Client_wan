@@ -1,0 +1,13 @@
+---
+
+- name: sh int
+  hosts: all
+  tasks:
+    - name: sh int
+      ios_command:
+        commands: sh ip int brief
+      register: output
+
+    - name: print output
+      ansible.builtin.debug:
+        var: output
