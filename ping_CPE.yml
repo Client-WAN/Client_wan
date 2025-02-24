@@ -6,8 +6,10 @@
     - name: Test ICMP ping
       ansible.builtin.ping:
       register: ping_result
+    - debug:
+        var: ping_result
 
-    - name: Display ping results
-      debug:
-        msg: "{{ inventory_hostname }} is reachable"
-      when: ping_result.ping is defined
+    # - name: Display ping results
+    #   debug:
+    #     msg: "{{ inventory_hostname }} is reachable"
+    #   when: ping_result.ping is defined
