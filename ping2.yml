@@ -7,7 +7,6 @@
       ansible.builtin.shell: 
         cmd: "ping -c 3 {{ inventory_hostname }}"
       register: ping_result
-      ignore_erros: yes
 
     - debug:
         var: ping_result
