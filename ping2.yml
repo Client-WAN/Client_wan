@@ -4,7 +4,8 @@
   gather_facts: no
   tasks:
     - name: Test ICMP
-      ansible.builtin.shell: "ping -c 3 {{ inventory_hostname }}"
+      ansible.builtin.shell: 
+        cmd: "ping -c 3 {{ inventory_hostname }}"
       register: ping_result
       ignore_erros: yes
 
