@@ -1,0 +1,12 @@
+---
+- name: Ping network devices
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Test ICMP
+      ansible.builtin.shell: "ping -c 3 {{ inventory_hostname }}"
+      register: ping_result
+      ignore_erros: yes
+
+    - debug:
+        var: ping_result
