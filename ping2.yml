@@ -4,9 +4,7 @@
   gather_facts: no
   tasks:
     - name: Test ICMP
-      ansible.builtin.shell: 
-        cmd: ping {{ inventory_hostname }}
-      delegate_to: local_host
+      ansible.builtin.raw: ping {{ inventory_hostname }}
       register: ping_result
 
     - debug:
