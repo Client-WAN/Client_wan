@@ -5,7 +5,7 @@
   tasks:
     - name: Test ICMP
       ansible.builtin.shell: 
-        cmd: which ping
+        cmd: ping {{ inventory_hostname }}
       delegate_to: local_host
       register: ping_result
 
