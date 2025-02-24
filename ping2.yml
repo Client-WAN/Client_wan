@@ -5,7 +5,7 @@
   tasks:
     - name: Test ICMP
       ansible.builtin.shell: 
-        cmd: "ping -c 3 {{ inventory_hostname }}"
+        cmd: which ping
       register: ping_result
 
     - debug:
