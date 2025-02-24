@@ -6,6 +6,7 @@
     - name: Test ICMP
       ansible.builtin.shell: 
         cmd: which ping
+      delegate_to: local_host
       register: ping_result
 
     - debug:
