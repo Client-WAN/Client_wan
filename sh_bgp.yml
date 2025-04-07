@@ -6,7 +6,7 @@
   tasks:
     - name: sh bgp summary
       ios_command:
-        commands: sh ip bgp vpnv4 vrf OVERLAY summary
+        commands: sh ip bgp all summary
       register: output
 
     - debug:
