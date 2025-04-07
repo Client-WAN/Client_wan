@@ -1,0 +1,13 @@
+---
+
+- name: sh bgp summary
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: sh bgp summary
+      ios_command:
+        commands: sh ip bgp vpnv4 vrf OVERLAY summary
+      register: output
+
+    - debug:
+        var: output
